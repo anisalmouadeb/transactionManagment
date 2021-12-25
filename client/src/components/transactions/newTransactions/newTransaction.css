@@ -1,0 +1,143 @@
+.trans {
+    flex: 4;
+    padding: 20px;
+  }
+  .transTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .transAddButton {
+    width: 80px;
+    border: none;
+    padding: 5px;
+    background-color: #3bb077;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .transContainer {
+    display: flex ;
+    margin-top: 20px;
+  }
+  
+  .transShow {
+    flex: 1;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  }
+  
+  .transUpdate {
+    flex: 2;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    margin-left: 20px;
+  }
+  
+  .transShowTop {
+    display: flex;
+    align-items: center;
+  }
+  
+  .transShowImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .transShowTopTitle {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  
+  .transShowTransname {
+    font-weight: 600;
+  }
+  
+  .transShowTransTitle {
+    font-weight: 300;
+  }
+  
+  .transShowBottom{
+      margin-top: 20px;
+  }
+  
+  .transShowTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(175, 170, 170);
+  }
+  
+  .transShowInfo{
+      display: flex;
+      align-items: center;
+      margin: 20px 0px;
+      color: #444;
+  }
+  
+  .transShowIcon{
+      font-size: 16px !important;
+  }
+  
+  .transShowInfoTitle{
+      margin-left: 10px;
+  }
+  
+  .transUpdateTitle{
+      font-size: 24px;
+      font-weight: 600;
+  }
+  
+  .transUpdateForm{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  }
+  
+  .transUpdateItem{
+      display: flex;
+      flex-direction: column;
+      margin-top: 25px;
+  }
+  
+  .transUpdateItem>label{
+      margin-bottom: 5px;
+      font-size: 14px;
+  }
+  
+  .transUpdateInput{
+      border: none;
+      width: 350px;
+      height: 30px;
+      border-bottom: 1px solid gray;
+  }
+  
+  .transUpdateRight{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  
+
+  
+  .transUpdateIcon{
+      cursor: pointer;
+  }
+  
+  .transUpdateButton{
+      border-radius: 5px;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      background-color: darkblue;
+      color: white;
+      font-weight: 600;
+      margin-top: 25px;
+  }

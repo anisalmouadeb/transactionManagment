@@ -1,0 +1,7 @@
+export const CREATE = 'CREATE';
+export const UPDATE = 'UPDATE';
+export const DELETE_TRANSACTION = 'DELETE_TRANSACTION';
+export const FETCH_ALL = 'FETCH_ALL';
+export const FETCH_TRANSACTION = 'FETCH_TRANSACTION';
+export const START_LOADING = 'START_LOADING';
+export const END_LOADING = 'END_LOADING';
