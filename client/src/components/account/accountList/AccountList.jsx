@@ -5,17 +5,16 @@ import { DeleteOutline } from "@material-ui/icons";
 import { useSelector,useDispatch } from "react-redux";
 import {  getAccounts,deleteAccount } from "../../../actions/account";
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
-
+import {CircularProgress } from "@material-ui/core";
 export default function AccountList() {
   const dispatch = useDispatch();
-  const History = useHistory()
+
   useEffect(() => {
   
     dispatch(getAccounts())
   }, []);
- 
-  const {accounts} = useSelector((state) => state.accounts);
+
+  const {accounts,isLoading} = useSelector((state) => state.accounts);
   const d=<p style={{color:'red'}}>Disabled</p>
   const d2=<p style={{color:'green'}}>activated</p>
   const columns = [
@@ -70,6 +69,11 @@ export default function AccountList() {
   }): rows=[]
   
 return (
+  isLoading? (
+    <div className="accountList">
+    <CircularProgress />
+   </div> 
+  ) : (
     <div className="accountList">
         <Link to={"/addAccount"}>
                   <button className="accountListAdd">Add New Account</button>
@@ -82,4 +86,4 @@ return (
         checkboxSelection
       />
     </div>
-  );}
+  ));}

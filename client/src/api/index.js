@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000';
+const url = 'https://transactionsmanagement.herokuapp.com';
 
 export const fetchAccounts = () => axios.get(`${url}/accounts`);
 export const fetchActiveAccounts= () => axios.get(`${url}/accounts/active`);

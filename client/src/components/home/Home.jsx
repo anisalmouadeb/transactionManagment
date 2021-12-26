@@ -5,11 +5,12 @@ import FeaturedInfo from "./featuredInfo/FeaturedInfo";
 import { DataGrid } from "@material-ui/data-grid";
 import { useDispatch, useSelector } from 'react-redux';
 import {getAccounts} from "../../actions/account"
+import {CircularProgress } from "@material-ui/core";
 export default function Home() {
     const dispatch = useDispatch()
     const [lastTransactions, setLastTransactions] = useState([]);
     const {accounts} = useSelector((state) => state.accounts);
-    
+    const {isLoading}=useSelector((state) => state.accounts);
     useEffect(() => {
           dispatch(getAccounts())
           const fetchLasts = async () => {
@@ -56,6 +57,11 @@ export default function Home() {
       }): rows=[]
     
     return (
+      isLoading? (
+        <div className="home">
+        <CircularProgress />
+       </div> 
+      ) : (
         <div className="home">
        <FeaturedInfo/>
        <div className="accountTitleContainer">
@@ -71,7 +77,7 @@ export default function Home() {
        
      
       </div>
-    )
+    ))
 }
 
 

@@ -17,6 +17,9 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 app.use("/transactions", transactionRoutes);
 app.use("/accounts", accountRoutes);
+app.get("/",(req, res) => {
+  res.send("APP IS RUNNING" )
+})
 
 const swaggerOptions = {
   definition: {

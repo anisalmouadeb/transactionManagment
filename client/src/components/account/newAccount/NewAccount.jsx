@@ -2,7 +2,7 @@ import React, {useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./newAccount.css";
-import { createAccount } from "../../../actions/account";
+import { getAccounts,createAccount } from "../../../actions/account";
 import { TextField } from "@material-ui/core";
 export default function NewAccount() {
   const dispatch = useDispatch();
@@ -37,11 +37,11 @@ export default function NewAccount() {
   const verifExist = () => {
     var occ = 0;
     accounts.map((acc) => {
-      if (acc.libelle == accountData.libelle) {
+      if (acc.libelle === accountData.libelle) {
         occ = occ + 1;
       }
     });
-    if(occ==0)
+    if(occ===0)
     {
       return false;
     }else{
@@ -93,6 +93,7 @@ export default function NewAccount() {
     if(isvalid)
     {
       dispatch(createAccount(accountData, history));
+      dispatch(getAccounts())
       history.push(`/accounts`);
     }
     else{

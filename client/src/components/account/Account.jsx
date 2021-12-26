@@ -203,8 +203,6 @@ export default function Account() {
             pageSize={11}
             checkboxSelection
           />
-         
-        
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import {FETCH_ALL, CREATE ,FETCH_TRANSACTION, UPDATE , DELETE_TRANSACTION,START_LOADING,END_LOADING } from '../constants/transactions'
+import {FETCH_ALL, CREATE ,DELETE_TRANSACTION,START_LOADING,END_LOADING } from '../constants/transactions'
 export default (state={transactions:[]}, action) => {
   switch (action.type) {
     case START_LOADING:
@@ -10,7 +10,6 @@ export default (state={transactions:[]}, action) => {
       ...state ,transactions:action.payload
     }  
     case CREATE:
-      
       return { ...state, transactions:[...state,action.payload ]}
      case DELETE_TRANSACTION:
     
