@@ -7,7 +7,7 @@ import { useParams,useHistory } from "react-router-dom";
 import "./account.css";
 import {getAccount, updateAccount} from "../../actions/account"
 import { DataGrid } from "@material-ui/data-grid";
-
+import AccountFeaturedInfo from "./accountFeaturedInfo/AccountFeaturedInfo";
 export default function Account() {
   
     const dispatch=useDispatch()
@@ -125,15 +125,16 @@ export default function Account() {
   return (
     
    <div className="account">
+    
       <div className="accountTitleContainer">
-        <h1 className="accountTitle">Account #{account.libelle}</h1>
-        
+        <h1 className="accountTitle">#{account.libelle}</h1>
+        <AccountFeaturedInfo/>  
       </div>
       <div className="accountContainer">
         <div className="accountShow">
-          
+        <span className="accountUpdateTitle">Account Details</span>
           <div className="accountShowBottom">
-            <span className="accountShowTitle">Details</span>
+            
             <div className="accountShowInfo">
               <MonetizationOn className="accountShowIcon" />
               <span className="accountShowInfoTitle">Balance : {account.solde}</span>
@@ -147,7 +148,7 @@ export default function Account() {
           </div>
         </div>
         <div className="accountUpdate">
-          <span className="accountUpdateTitle">Edit</span>
+          <span className="accountUpdateTitle">Edit Account</span>
           <form className="accountUpdateForm">
             <div className="accountUpdateLeft">
             <div className="accountUpdateItem">
@@ -191,7 +192,7 @@ export default function Account() {
           </form>
         </div>
       </div>
-      
+     
       <div className="accountTitleContainer">
         <h1 className="accountTitle">History of Transactions</h1>
       </div>

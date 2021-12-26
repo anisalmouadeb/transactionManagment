@@ -9,8 +9,9 @@ export default function Home() {
     const dispatch = useDispatch()
     const [lastTransactions, setLastTransactions] = useState([]);
     const {accounts} = useSelector((state) => state.accounts);
+    
     useEffect(() => {
-        dispatch(getAccounts())
+          dispatch(getAccounts())
           const fetchLasts = async () => {
           const res = await api.fetchLastTransactions();
           setLastTransactions(res.data.transactions);
