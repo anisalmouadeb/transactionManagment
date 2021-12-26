@@ -91,7 +91,7 @@ export default function TransactionsList() {
             rows={rows}
             disableSelectionOnClick
             columns={columns}
-            pageSize={11}
+            pageSize={10}
             checkboxSelection
           />
          

@@ -31,12 +31,12 @@ export default function FeaturedInfo() {
   var creditAmountSum = 0;
   transactions.map((trans) => {
     if (trans.type === "crediter"&& trans.account===accountId) {
-      debitAmountSum = debitAmountSum + Number(trans.montant);
+      creditAmountSum = creditAmountSum + Number(trans.montant);
     }
   });
   transactions.map((trans) => {
     if (trans.type === "debiter" && trans.account===accountId) {
-      creditAmountSum = creditAmountSum + Number(trans.montant);
+      debitAmountSum = debitAmountSum + Number(trans.montant);
     }
   });
 
@@ -46,7 +46,7 @@ export default function FeaturedInfo() {
       <div className="accountFeaturedItem">
         <span className="accountFeaturedTitle">Credit Transactions</span>
         <div className="accountFeaturedMoneyContainer">
-          <span className="accountFeaturedMoney">${debitAmountSum}</span>
+          <span className="accountFeaturedMoney">{creditAmountSum} DT</span>
           <span className="accountFeaturedMoneyRate">
             <ArrowUpward className="accountFeaturedIcon" />
           </span>
@@ -55,7 +55,7 @@ export default function FeaturedInfo() {
       <div className="accountFeaturedItem">
         <span className="accountFeaturedTitle">Debit Transactions</span>
         <div className="accountFeaturedMoneyContainer">
-          <span className="accountFeaturedMoney">${creditAmountSum}</span>
+          <span className="accountFeaturedMoney">{debitAmountSum} DT</span>
           <span className="accountFeaturedMoneyRate">
             <ArrowDownward className="accountFeaturedIcon negative" />
           </span>

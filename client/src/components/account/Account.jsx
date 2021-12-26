@@ -110,6 +110,7 @@ export default function Account() {
          params.row.type==="crediter" ? t2:t
         );
         }},   
+        { field: 'description', headerName: 'Description', width: 200},
   ];
   let rows=[]
   transactions ? rows = transactions.map(tran => {
@@ -119,6 +120,7 @@ export default function Account() {
       montant : tran.montant,
       createAt: new Date(tran.createdAt).toISOString().substr(0,10),
       type:tran.type,
+      description:tran.description
       
     };
   }):rows=[]
@@ -200,7 +202,7 @@ export default function Account() {
             rows={rows}
             disableSelectionOnClick
             columns={columns}
-            pageSize={11}
+            pageSize={10}
             checkboxSelection
           />
     </div>
