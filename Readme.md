@@ -1,4 +1,4 @@
-# Transaction Managment web application (neopolis test)
+# Transactions Management web application (neopolis test)
 > Site built with Node.js, React, Redux, Express, MongoDB
 
 #### Install Dependencies (Backend)
